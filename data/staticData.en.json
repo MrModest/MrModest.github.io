@@ -1,0 +1,16 @@
+{
+    "profile": {
+        "firstName": "Kamil",
+        "lastName": "Babaev",
+        "nickname": "MrModest",
+        "info": ""
+    },
+
+    "contacts": [{
+        "label": "",
+        "fullname": "",
+        "link": "",
+        "logoUrl": "",
+        "description": ""
+    }]
+}
