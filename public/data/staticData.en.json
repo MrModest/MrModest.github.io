@@ -1,0 +1,203 @@
+{
+    "header": {
+        "title": "",
+        "langCaption": "Language",
+        "description": ""
+    },
+    "profile": {
+        "firstName": "Kamil",
+        "lastName": "Babaev",
+        "nickname": "MrModest",
+        "info": ""
+    },
+    "blocks": [
+        {
+            "title": "For communicate",
+            "description": "",
+            "cards": [
+                {
+                    "label": "Vk",
+                    "fullname": "Kamil Babaev",
+                    "responseTime": "1 hour",
+                    "link": "https://vk.com/mrm0dest",
+                    "logoUrl": "/vk.png",
+                    "description": "The easiest way to contact me, if you don't know my phone number."
+                },
+                {
+                    "label": "Telegram",
+                    "fullname": "MrModest",
+                    "responseTime": "1 hour",
+                    "link": "https://t.me/MrModest",
+                    "logoUrl": "/telegram.png",
+                    "description": "Sometime can be trouble with getting notifications."
+                },
+                {
+                    "label": "Email",
+                    "fullname": "babaevkamil@gmail.com",
+                    "responseTime": "1 day",
+                    "link": "mailto:babaevkamil@gmail.com",
+                    "logoUrl": "/gmail.png",
+                    "description": "Any questions"
+                },
+                {
+                    "label": "LinkedIn",
+                    "fullname": "Kamil Babaev",
+                    "responseTime": "1 week",
+                    "link": "https://www.linkedin.com/in/mrmodest/",
+                    "logoUrl": "/linkedin.png",
+                    "description": "~"
+                }
+            ]
+        },
+        {
+            "title": "Other socials",
+            "description": "",
+            "cards": [
+                {
+                    "label": "Instagram",
+                    "fullname": "mrm0dest",
+                    "responseTime": "~",
+                    "link": "https://instagram.com/mrm0dest",
+                    "logoUrl": "/instagram.png",
+                    "description": "Sometimes posting new photos."
+                },
+                {
+                    "label": "Discord",
+                    "fullname": "MrModest#5720",
+                    "responseTime": "very rarely",
+                    "link": "MrModest#5720",
+                    "logoUrl": "/discord.png",
+                    "description": "If you need me in Discord, invite me from another contact way."
+                },
+                {
+                    "label": "Github",
+                    "fullname": "MrModest",
+                    "responseTime": "~",
+                    "link": "https://github.com/MrModest",
+                    "logoUrl": "/github.png",
+                    "description": "All my public projects is here."
+                },
+                {
+                    "label": "Steam",
+                    "fullname": "MrModest",
+                    "responseTime": "1 month",
+                    "link": "https://steamcommunity.com/id/mrmodest",
+                    "logoUrl": "/steam.png",
+                    "description": "Rarely be here. Almost don't play MMO games."
+                },
+                {
+                    "label": "Reddit",
+                    "fullname": "/u/FckngModest",
+                    "responseTime": "1 week",
+                    "link": "https://www.reddit.com/user/FckngModest",
+                    "logoUrl": "/reddit.png",
+                    "description": "Sometime scroll my front page."
+                },
+                {
+                    "label": "YouTube",
+                    "fullname": "Mr. Modest",
+                    "responseTime": "~",
+                    "link": "https://www.youtube.com/channel/UC_vKzuMHp7GA-mqyFc46QRg",
+                    "logoUrl": "/youtube.png",
+                    "description": ""
+                },
+                {
+                    "label": "Facebook",
+                    "fullname": "Kamil Babaev",
+                    "responseTime": "~",
+                    "link": "https://www.facebook.com/mrm0dest",
+                    "logoUrl": "/facebook.png",
+                    "description": "Don't get notifications"
+                },
+                {
+                    "label": "Twitter",
+                    "fullname": "mrm0dest",
+                    "responseTime": "~",
+                    "link": "https://twitter.com/MrM0dest",
+                    "logoUrl": "/twitter.png",
+                    "description": ""
+                },
+                {
+                    "label": "Wishlist",
+                    "fullname": "MrModest",
+                    "responseTime": "~",
+                    "link": "http://mywishlist.ru/wishlist/mrmodest",
+                    "logoUrl": "/gift_box.png",
+                    "description": "A list of things that you can gift me if you don't know what."
+                },
+                {
+                    "label": "Coub",
+                    "fullname": "MrModest",
+                    "responseTime": "~",
+                    "link": "https://coub.com/mrmodest",
+                    "logoUrl": "/coub.png",
+                    "description": "Short video (up to 15 minutes) with music."
+                },
+                {
+                    "label": "Shikimori",
+                    "fullname": "MrModest",
+                    "responseTime": "~",
+                    "link": "https://shikimori.org/MrModest",
+                    "logoUrl": "/shikimori.png",
+                    "description": "The most actual anime/manga list."
+                },
+                {
+                    "label": "MyAnimeList",
+                    "fullname": "MrModest",
+                    "responseTime": "~",
+                    "link": "https://myanimelist.net/profile/MrModest",
+                    "logoUrl": "/myanimelist.png",
+                    "description": "Time to time actualizing list from shikimori."
+                },
+                {
+                    "label": "Kitsu",
+                    "fullname": "MrModest",
+                    "responseTime": "~",
+                    "link": "https://kitsu.io/users/MrModest",
+                    "logoUrl": "/kitsu.png",
+                    "description": "Time to time actualizing list from shikimori."
+                },
+                {
+                    "label": "AniList",
+                    "fullname": "MrModest",
+                    "responseTime": "~",
+                    "link": "https://anilist.co/user/MrModest/",
+                    "logoUrl": "/anilist.png",
+                    "description": "Time to time actualizing list from shikimori."
+                },
+                {
+                    "label": "StackOverflow [Ru]",
+                    "fullname": "MrModest",
+                    "responseTime": "~",
+                    "link": "https://ru.stackoverflow.com/users/233980/mrmodest",
+                    "logoUrl": "/stackexchange.png",
+                    "description": ""
+                },
+                {
+                    "label": "StackOverflow [En]",
+                    "fullname": "MrModest",
+                    "responseTime": "~",
+                    "link": "https://stackoverflow.com/users/7422280/mrmodest",
+                    "logoUrl": "/stackexchange.png",
+                    "description": ""
+                },
+                {
+                    "label": "4PDA",
+                    "fullname": "babaevkamil",
+                    "responseTime": "~",
+                    "link": "http://4pda.ru/forum/index.php?showuser=2525102",
+                    "logoUrl": "/4pda.png",
+                    "description": ""
+                },
+                {
+                    "label": "Pikabu",
+                    "fullname": "MrModest",
+                    "responseTime": " - ",
+                    "link": "https://pikabu.ru/@MrModest",
+                    "logoUrl": "/pikabu.png",
+                    "description": "For quite some time now I don't go to the site at all."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+.col-md-4 a {
+  color: black;
+  text-decoration: none;
+}
+
+.card {
+	/*background-color: rgba(242,242,242,0.7);*/
+	border: none;
+	margin-top: 30px;
+	transition: 500ms;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .1);
+	height: 160px;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+	.col-md-4 {
+		min-width: 50%!important;
+		flex : 0 0 50%!important;
+	}
+}
+
+.card a {
+	color: black;
+}
+
+.card:hover {
+	box-shadow: 25px 15px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-title {
+	height: 40px;
+	background-color:rgba(215,215,215,.7);
+	padding: 0.5em 0.5em;
+	margin-bottom: 0.45rem;
+}
+.card-body {
+	display: flex;
+	padding: 0.5em;
+	padding-top: 0;
+}
+.card-logo {
+	display: block;
+	width: 100px;
+	height: 100px;
+}
+
+.card-logo img {
+	width: inherit;
+	height: inherit;
+}
+
+
+.card-content {
+	margin-left: 0.5rem;
+	padding-right: 0.2rem;
+}
+
+.card-activity {
+	color: gray;
+	font-size: 13px;
+}
+
+.card-comment {
+	font-size: 13px;
+	line-height: 1.5;
+	height: 4.5em;
+	overflow: hidden;
+} 
+
+@media (max-width: 420px) {
+	.card-comment {
+		height: 3em;
+  }
+}

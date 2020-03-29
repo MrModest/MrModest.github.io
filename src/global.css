@@ -1,0 +1,9 @@
+body {
+	font-family: 'SFThin';
+	background-color: rgba(242, 242, 242, 0.5);
+}
+
+h1, h4 {
+	font-family: 'SFBold';
+	margin-top: 1em;
+}
