@@ -7,9 +7,7 @@ import Loading from './components/Loading';
 import Block from './components/Block';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from './App.module.css';
-import classNames from 'classnames/bind';
-const cx = classNames.bind(styles);
+import './global.css';
 
 function App() {
   const [dataCache, setDataCache] = useState();
@@ -23,30 +21,26 @@ function App() {
     
     fetchData();
 
-    const setDefaultLocale = () => {
+    const getDefaultLocale = () => {
       const lang = navigator.language || navigator.userLanguage;
 
-      if (lang.toLowerCase().match('ru') === null) {
-        setLocale('en');
-      } else {
-        setLocale('ru');
-      }
+      return (lang.toLowerCase().match('ru') === null)
+        ? 'en'
+        : 'ru';
     };
 
-    setDefaultLocale();
+    setLocale(getDefaultLocale());
   }, []);
 
   useEffect(() => {
     if (dataCache) { setLocaleData(dataCache[locale]); }
   }, [dataCache, locale]);
 
-  const onChangeLocale = (langCode) => {
-    setLocale(langCode);
-  };
+  const onChangeLocale = locale => setLocale(locale);
 
   return (!localeData) ? <Loading /> : (
-    <div className={cx('wrapper')}>
-      <div className={cx('content', 'container')}>
+    <div className='wrapper'>
+      <div className='content container'>
         <LanguageSwitcher langCaption = {localeData.header.langCaption} setLocale = {onChangeLocale} />
         <br /> <hr />
         {localeData.blocks.map(block => 
