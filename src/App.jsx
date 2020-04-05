@@ -5,6 +5,7 @@ import Repository from './Repository'
 import LanguageSwitcher from './components/LanguageSwitcher';
 import Loading from './components/Loading';
 import Block from './components/Block';
+import Footer from './components/Footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './global.css';
@@ -30,6 +31,8 @@ function App() {
     };
 
     setLocale(getDefaultLocale());
+
+    document.title = "MrModest | Contacts";
   }, []);
 
   useEffect(() => {
@@ -47,6 +50,7 @@ function App() {
           (<Block key={block.title} {...block} />)
         )}
       </div>
+      <Footer />
     </div>
   );
 }
