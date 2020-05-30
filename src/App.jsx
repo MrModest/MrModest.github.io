@@ -7,7 +7,6 @@ import Loading from './components/Loading';
 import Block from './components/Block';
 import Footer from './components/Footer';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './global.css';
 
 function App() {
@@ -42,16 +41,21 @@ function App() {
   const onChangeLocale = locale => setLocale(locale);
 
   return (!localeData) ? <Loading /> : (
-    <div className='wrapper'>
-      <div className='content container'>
+    <React.Fragment>
+      <header>
         <LanguageSwitcher langCaption = {localeData.header.langCaption} setLocale = {onChangeLocale} />
-        <br /> <hr />
+      </header>
+      <hr />
+      <div class='container'>
         {localeData.blocks.map(block => 
           (<Block key={block.title} {...block} />)
         )}
       </div>
-      <Footer />
-    </div>
+      <hr />
+      <footer>
+        <Footer />
+      </footer>
+    </React.Fragment>
   );
 }
 

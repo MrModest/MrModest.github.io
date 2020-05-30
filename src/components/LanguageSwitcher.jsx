@@ -1,6 +1,5 @@
 import React from 'react';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../global.css';
 
 export default function LanguageSwitcher(props) {
@@ -8,12 +7,10 @@ export default function LanguageSwitcher(props) {
   const setRu = () => props.setLocale('ru');
 
   return (
-    <div className='lang col-md-6'>
-      <div>
-        <h4>{props.langCaption}</h4>
-      </div>
-      <div className='lang-switch en' onClick={setEn}>English</div>
-      <div className='lang-switch ru' onClick={setRu}>Русский</div>
-    </div>
+    <div class='lang-switcher'>
+      <h2>{props.langCaption}</h2>
+      <button class='lang-switch en' onClick={setEn}>English</button>
+      <button class='lang-switch ru' onClick={setRu}>Русский</button>
+  </div>
   );
 }

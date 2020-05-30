@@ -2,17 +2,16 @@ import React from 'react';
 
 import Card from './Card';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../global.css';
 
 export default function Block(props) {
   return (
-    <div className='social'>
-      <h1>{props.title}</h1>
-      <div className='row'>
-          {props.cards.map(card => 
-            (<Card key={card.label} {...card} />)
-          )}
+    <div class='block'>
+      <h3>{props.title}</h3>
+      <div class='block-container'>
+        {props.cards.map(card => 
+          (<Card key={card.label} {...card} />)
+        )}
       </div>
     </div>
   );
