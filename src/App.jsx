@@ -52,9 +52,7 @@ function App() {
         )}
       </div>
       <hr />
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </React.Fragment>
   );
 }
