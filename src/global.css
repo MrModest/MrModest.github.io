@@ -110,6 +110,12 @@ a {
 	font-size: 0.9em;
 }
 
+.input-edit {
+	background: transparent;
+	border: none;
+  width: 100%;
+}
+
 .copiright {
 	padding: 0 2em;
 	font-style: italic;

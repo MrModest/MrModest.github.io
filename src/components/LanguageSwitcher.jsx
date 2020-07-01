@@ -7,10 +7,10 @@ export default function LanguageSwitcher(props) {
   const setRu = () => props.setLocale('ru');
 
   return (
-    <div class='lang-switcher'>
+    <div className='lang-switcher'>
       <h2>{props.langCaption}</h2>
-      <button class='lang-switch en' onClick={setEn}>English</button>
-      <button class='lang-switch ru' onClick={setRu}>Русский</button>
+      <button className='lang-switch en' onClick={setEn}>English</button>
+      <button className='lang-switch ru' onClick={setRu}>Русский</button>
   </div>
   );
 }

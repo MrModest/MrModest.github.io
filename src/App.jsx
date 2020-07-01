@@ -13,23 +13,16 @@ function App() {
   const [dataCache, setDataCache] = useState();
   const [locale, setLocale] = useState('en');
   const [localeData, setLocaleData] = useState();
+  const [editMode, setEditMode] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
-      setDataCache(await Repository.getStaticData());
+      setDataCache(await Repository.getData());
     };
     
     fetchData();
 
-    const getDefaultLocale = () => {
-      const lang = navigator.language || navigator.userLanguage;
-
-      return (lang.toLowerCase().match('ru') === null)
-        ? 'en'
-        : 'ru';
-    };
-
-    setLocale(getDefaultLocale());
+    setLocale(Repository.defaultLocale);
 
     document.title = "MrModest | Contacts";
   }, []);
@@ -40,15 +33,18 @@ function App() {
 
   const onChangeLocale = locale => setLocale(locale);
 
+  const onEditModeChange = event => setEditMode(event.target.checked);
+
   return (!localeData) ? <Loading /> : (
     <React.Fragment>
       <header>
         <LanguageSwitcher langCaption = {localeData.header.langCaption} setLocale = {onChangeLocale} />
+        <input type='checkbox' onChange={onEditModeChange} />
       </header>
       <hr />
-      <div class='container'>
+      <div className='container'>
         {localeData.blocks.map(block => 
-          (<Block key={block.title} {...block} />)
+          (<Block key={block.title} editMode={editMode} {...block} />)
         )}
       </div>
       <hr />
