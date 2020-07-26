@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-
-import Repository from './Repository'
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { createSelector } from 'reselect';
 
 import LanguageSwitcher from './components/LanguageSwitcher';
 import Loading from './components/Loading';
@@ -9,42 +9,39 @@ import Footer from './components/Footer';
 
 import './global.css';
 
+import { setDefaultLanguage, fetchBlocks, fetchCards, fetchProfiles } from './actions';
+
 function App() {
-  const [dataCache, setDataCache] = useState();
-  const [locale, setLocale] = useState('en');
-  const [localeData, setLocaleData] = useState();
-  const [editMode, setEditMode] = useState(false);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const fetchData = async () => {
-      setDataCache(await Repository.getData());
-    };
-    
-    fetchData();
+    dispatch(fetchBlocks());
+    dispatch(fetchCards());
+    dispatch(fetchProfiles());
 
-    setLocale(Repository.defaultLocale);
+    dispatch(setDefaultLanguage());
 
     document.title = "MrModest | Contacts";
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    if (dataCache) { setLocaleData(dataCache[locale]); }
-  }, [dataCache, locale]);
+  const selectBlocks = createSelector(
+    state => state.blocks,
+    state => state.language,
+    (blocks, language) => blocks.filter(b => b.language === language)
+  );
 
-  const onChangeLocale = locale => setLocale(locale);
+  const blocks = useSelector(selectBlocks);
 
-  const onEditModeChange = event => setEditMode(event.target.checked);
-
-  return (!localeData) ? <Loading /> : (
+  return (!blocks) ? <Loading /> : (
     <React.Fragment>
       <header>
-        <LanguageSwitcher langCaption = {localeData.header.langCaption} setLocale = {onChangeLocale} />
-        <input type='checkbox' onChange={onEditModeChange} />
+        <LanguageSwitcher />
       </header>
       <hr />
       <div className='container'>
-        {localeData.blocks.map(block => 
-          (<Block key={block.title} editMode={editMode} {...block} />)
+        {blocks.map(block => 
+          (<Block key={block.id} {...block} />)
         )}
       </div>
       <hr />

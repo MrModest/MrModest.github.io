@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Repository from '../Repository';
+import * as api from '../api.js';
 
 import '../global.css';
 
-export default function CardEdit(props) {
+export default function CardEditModal(props) {
 
   return (
     <div className='card' href={props.link} target='_blank' rel='noopener noreferrer'>
@@ -12,7 +12,7 @@ export default function CardEdit(props) {
         <input className='input-edit' type='text' defaultValue={props.label} />
       </div>
       <div className='card-body'>
-        <img className='card-logo' src={Repository.getLogoFullUrl(props.logoUrl)} alt={props.name} />
+        <img className='card-logo' src={api.getLogoUrl(props.logo)} alt={props.name} />
         <div className='card-content'>
           <div className='card-label'>
           <input className='input-edit' type='text' defaultValue={props.fullname} />

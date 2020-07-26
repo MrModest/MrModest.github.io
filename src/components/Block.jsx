@@ -1,23 +1,30 @@
 import React from 'react';
+import { createSelector } from 'reselect';
 
 import Card from './Card';
-import CardEdit from './CardEdit';
 
 import '../global.css';
+import { useSelector } from 'react-redux';
 
-export default function Block(props) {
+const Block = ({ id, title }) => {
+  const selectCards = createSelector(
+    state => state.cards,
+    state => state.language,
+    (cards, language) => cards.filter(c => c.language === language && c.blockId === id)
+  );
+
+  const cards = useSelector(selectCards);
+
   return (
     <div className='block'>
-      <h3>{props.title}</h3>
+      <h3>{title}</h3>
       <div className='block-container'>
-        {props.editMode
-        ? props.cards.map(card => 
-          (<CardEdit key={card.label} {...card} />)
-        )
-        : props.cards.map(card => 
-          (<Card key={card.label} {...card} />)
+        {cards.map(card => 
+          (<Card key={card.id} {...card} />)
         )}
       </div>
     </div>
   );
 }
+
+export default Block;
