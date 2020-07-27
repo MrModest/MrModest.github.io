@@ -12,10 +12,10 @@ export const rootUrl = process.env.PUBLIC_URL;
 export const dataUrl = rootUrl + '/data';
 export const logosUrl = dataUrl + '/logos';
 
-export async function getL10n(): Promise<Localisation> {
-  var resp = await axios.get(`${dataUrl}/l10n.json`)
+export async function getLocalisation(): Promise<Localisation> {
+  var resp = await axios.get(`${dataUrl}/localisation.json`)
   if (resp.status !== 200) {
-    throw new Error("Can't load l10n!");
+    throw new Error("Can't load localisation!");
   }
   return resp.data;
 }
