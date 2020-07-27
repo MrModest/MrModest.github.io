@@ -1,10 +1,11 @@
 import React from 'react';
 
-import * as api from '../api.js';
+import * as api from '../api';
 
 import '../global.css';
+import Card from '../entities/Card';
 
-const Card = ({ label, logo, fullname, responseTime, link, description }) => {
+const CardComponent = ({ label, logo, fullname, responseTime, link, description }: Card) => {
   return (
     <a className='card' href={link} target='_blank' rel='noopener noreferrer'>
       <h4 className='card-title'>{label}</h4>
@@ -20,4 +21,4 @@ const Card = ({ label, logo, fullname, responseTime, link, description }) => {
   );
 }
 
-export default Card;
+export default CardComponent;

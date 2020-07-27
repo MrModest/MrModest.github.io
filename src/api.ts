@@ -1,20 +1,26 @@
 import axios from 'axios';
 
+import Localisation from './entities/Localisation';
+import Card from './entities/Card';
+import Block from './entities/Block';
+import Profile from './entities/Profile';
+
+
 export const langCodes = { ru: 'ru', en: 'en' }
 
 export const rootUrl = process.env.PUBLIC_URL;
 export const dataUrl = rootUrl + '/data';
 export const logosUrl = dataUrl + '/logos';
 
-export async function getL10n(lang) {
-  var resp = await axios.get(`${dataUrl}/l10n.${lang}.json`)
+export async function getL10n(): Promise<Localisation> {
+  var resp = await axios.get(`${dataUrl}/l10n.json`)
   if (resp.status !== 200) {
     throw new Error("Can't load l10n!");
   }
   return resp.data;
 }
 
-export async function getCards() {
+export async function getCards(): Promise<Card[]> {
   var resp = await axios.get(`${dataUrl}/cards.json`)
   if (resp.status !== 200) {
     throw new Error("Can't load cards");
@@ -22,7 +28,7 @@ export async function getCards() {
   return resp.data;
 }
 
-export async function getBlocks() {
+export async function getBlocks(): Promise<Block[]> {
   var resp = await axios.get(`${dataUrl}/blocks.json`)
   if (resp.status !== 200) {
     throw new Error("Can't load blocks");
@@ -30,7 +36,7 @@ export async function getBlocks() {
   return resp.data;
 }
 
-export async function getProfile() {
+export async function getProfiles(): Promise<Profile[]> {
   var resp = await axios.get(`${dataUrl}/profiles.json`)
   if (resp.status !== 200) {
     throw new Error("Can't load profile");
@@ -38,11 +44,11 @@ export async function getProfile() {
   return resp.data;
 }
 
-export function getLogoUrl(logoName) {
+export function getLogoUrl(logoName: string): string {
   return `${logosUrl}/${logoName}`;
 }
 
-export function getDefaultLanguage() {
+export function getDefaultLanguage(): string {
   const lang = navigator.language || navigator.userLanguage;
 
   return (lang.toLowerCase().match('ru') === null)

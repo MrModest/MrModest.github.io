@@ -8,8 +8,19 @@ import Block from './components/Block';
 import Footer from './components/Footer';
 
 import './global.css';
+import styles from './App.module.css';
+import bindClassNames from 'classnames/bind';
 
 import { setDefaultLanguage, fetchBlocks, fetchCards, fetchProfiles } from './actions';
+import { RootState } from './reducers';
+
+const selectBlocks = createSelector(
+  (state: RootState) => state.blocks,
+  state => state.language,
+  (blocks, language) => blocks.filter(b => b.language === language)
+);
+
+const cx = bindClassNames(styles);
 
 function App() {
   const dispatch = useDispatch();
@@ -25,12 +36,6 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const selectBlocks = createSelector(
-    state => state.blocks,
-    state => state.language,
-    (blocks, language) => blocks.filter(b => b.language === language)
-  );
-
   const blocks = useSelector(selectBlocks);
 
   return (!blocks) ? <Loading /> : (
@@ -39,7 +44,7 @@ function App() {
         <LanguageSwitcher />
       </header>
       <hr />
-      <div className='container'>
+      <div className='container' /*className={cx('container')}*/>
         {blocks.map(block => 
           (<Block key={block.id} {...block} />)
         )}

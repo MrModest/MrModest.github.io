@@ -12,4 +12,6 @@ const reducer = combineReducers({
   language
 });
 
+export type RootState = ReturnType<typeof reducer>
+
 export default reducer;

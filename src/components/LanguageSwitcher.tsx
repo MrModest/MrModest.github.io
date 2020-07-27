@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setLanguage } from '../actions'
 
 import '../global.css';
+import { RootState } from '../reducers';
 
 const LanguageSwitcher = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const LanguageSwitcher = () => {
   const setEn = () => dispatch(setLanguage('en'));
   const setRu = () => dispatch(setLanguage('ru'));
 
-  const caption = useSelector(state => state.language) === 'en' ? 'Language' : 'Язык';
+  const caption = useSelector<RootState>(state => state.language) === 'en' ? 'Language' : 'Язык';
 
   return (
     <div className='lang-switcher'>
