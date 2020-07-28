@@ -4,11 +4,11 @@ import * as api from '../api';
 
 import Card from '../entities/Card';
 
-import styles from './Card.module.css';
+import styles from './CardView.module.css';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
-const CardComponent = ({ label, logo, fullname, responseTime, link, description }: Card) => {
+const CardView = ({ label, logo, fullname, responseTime, link, description }: Card) => {
   return (
     <a className={cx('card')} href={link} target='_blank' rel='noopener noreferrer'>
       <h4 className={cx('card-title')}>{label}</h4>
@@ -24,4 +24,4 @@ const CardComponent = ({ label, logo, fullname, responseTime, link, description 
   );
 }
 
-export default CardComponent;
+export default CardView;

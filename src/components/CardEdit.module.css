@@ -1,0 +1,13 @@
+.card-edit {
+	display: flex;
+
+	max-width: 500px;
+}
+
+
+
+.input-edit {
+	background: transparent;
+	border: none;
+  width: 100%;
+}

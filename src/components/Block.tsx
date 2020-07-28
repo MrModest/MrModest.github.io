@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { createSelector } from 'reselect';
 
-import Card from './Card';
+import Card from './CardWrapper';
 
 import { useSelector } from 'react-redux';
 import Block from '../entities/Block';
