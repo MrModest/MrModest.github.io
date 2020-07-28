@@ -3,10 +3,13 @@ import { createSelector } from 'reselect';
 
 import Card from './Card';
 
-import '../global.css';
 import { useSelector } from 'react-redux';
 import Block from '../entities/Block';
 import { RootState } from '../reducers';
+
+import styles from './Block.module.css';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
 const selectCardsByBlockId = (blockId: number) => 
   createSelector(
@@ -21,9 +24,9 @@ const BlockComponent = ({ id, title }: Block) => {
   );
 
   return (
-    <div className='block'>
+    <div className={cx('block')}>
       <h3>{title}</h3>
-      <div className='block-container'>
+      <div className={cx('block-container')}>
         {cards.map(card => 
           (<Card key={card.id} {...card} />)
         )}

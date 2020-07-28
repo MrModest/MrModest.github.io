@@ -7,20 +7,18 @@ import Loading from './components/Loading';
 import Block from './components/Block';
 import Footer from './components/Footer';
 
-import './global.css';
-import styles from './App.module.css';
-import bindClassNames from 'classnames/bind';
-
 import { setDefaultLanguage, fetchBlocks, fetchCards, fetchProfiles } from './actions';
 import { RootState } from './reducers';
+
+import styles from './App.module.css';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
 const selectBlocks = createSelector(
   (state: RootState) => state.blocks,
   state => state.language,
   (blocks, language) => blocks.filter(b => b.language === language)
 );
-
-const cx = bindClassNames(styles);
 
 function App() {
   const dispatch = useDispatch();
@@ -44,7 +42,7 @@ function App() {
         <LanguageSwitcher />
       </header>
       <hr />
-      <div className='container' /*className={cx('container')}*/>
+      <div className={cx('container')}>
         {blocks.map(block => 
           (<Block key={block.id} {...block} />)
         )}

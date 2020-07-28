@@ -1,0 +1,19 @@
+body {
+	font-size: 1.2em;
+	font-family: 'SFRegular';
+	background-color: rgba(242, 242, 242, 0.5);
+	color: black;
+
+	margin: 0 200px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.input-edit {
+	background: transparent;
+	border: none;
+  width: 100%;
+}

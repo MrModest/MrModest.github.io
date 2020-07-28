@@ -1,0 +1,13 @@
+.block {
+	margin-top: 100px;
+}
+
+.block:first-child {
+	margin-top: 0px;
+}
+
+.block-container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}

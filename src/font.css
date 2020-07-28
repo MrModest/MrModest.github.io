@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'SFBold';
+	src: url('./fonts/SF-UI-Display-Bold.otf');
+}
+
+@font-face {
+	font-family: 'SFRegular';
+	src: url('./fonts/SF-UI-Display-Regular.otf');
+}
