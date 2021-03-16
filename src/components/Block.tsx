@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { createSelector } from 'reselect';
 
-import Card from './CardWrapper';
+import CardView from './CardView';
 
 import { useSelector } from 'react-redux';
 import Block from '../entities/Block';
@@ -28,7 +28,7 @@ const BlockComponent = ({ id, title }: Block) => {
       <h3>{title}</h3>
       <div className={cx('block-container')}>
         {cards.map(card => 
-          (<Card key={card.id} {...card} />)
+          (<CardView key={card.id} {...card} />)
         )}
       </div>
     </div>
