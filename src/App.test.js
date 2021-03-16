@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import AppWrapper from './AppWrapper';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
+test('renders For communicate header', () => {
+  const { getByText } = render(<AppWrapper />);
+  const linkElement = getByText(/For communicate/i);
   expect(linkElement).toBeInTheDocument();
 });
