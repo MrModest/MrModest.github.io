@@ -1847,6 +1847,13 @@
     "@types/prop-types" "*"
     "csstype" "^2.2.0"
 
+"@types/redux-mock-store@^1.0.2":
+  "integrity" "sha512-6LBtAQBN34i7SI5X+Qs4zpTEZO1tTDZ6sZ9fzFjYwTl3nLQXaBtwYdoV44CzNnyKu438xJ1lSIYyw0YMvunESw=="
+  "resolved" "https://registry.npmjs.org/@types/redux-mock-store/-/redux-mock-store-1.0.2.tgz"
+  "version" "1.0.2"
+  dependencies:
+    "redux" "^4.0.5"
+
 "@types/redux-promise@^0.5.29":
   "integrity" "sha512-lCBCTiJCweYtW5YgOIAG400dAi2Cr2IW6mfh1eZ8WqgxTRqPZjLAFQzxQ6oRZaB9g8mdzr28vOc3CAo8y/Na2w=="
   "resolved" "https://registry.npmjs.org/@types/redux-promise/-/redux-promise-0.5.29.tgz"
@@ -7287,6 +7294,11 @@
   "resolved" "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
   "version" "4.0.8"
 
+"lodash.isplainobject@^4.0.6":
+  "integrity" "sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs="
+  "resolved" "https://registry.npmjs.org/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz"
+  "version" "4.0.6"
+
 "lodash.memoize@^4.1.2":
   "integrity" "sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4="
   "resolved" "https://registry.npmjs.org/lodash.memoize/-/lodash.memoize-4.1.2.tgz"
@@ -9770,6 +9782,13 @@
   dependencies:
     "indent-string" "^4.0.0"
     "strip-indent" "^3.0.0"
+
+"redux-mock-store@^1.5.4":
+  "integrity" "sha512-xmcA0O/tjCLXhh9Fuiq6pMrJCwFRaouA8436zcikdIpYWWCjU76CRk+i2bHx8EeiSiMGnB85/lZdU3wIJVXHTA=="
+  "resolved" "https://registry.npmjs.org/redux-mock-store/-/redux-mock-store-1.5.4.tgz"
+  "version" "1.5.4"
+  dependencies:
+    "lodash.isplainobject" "^4.0.6"
 
 "redux-promise@^0.6.0":
   "integrity" "sha512-R2mGxJbPFgXyCNbFDE6LjTZhCEuACF54g1bxld3nqBhnRMX0OsUyWk77moF7UMGkUdl5WOAwc4BC5jOd1dunqQ=="
