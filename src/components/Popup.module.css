@@ -1,0 +1,64 @@
+.popup {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+
+  overflow: auto;
+
+  background: rgba(0, 0, 0, .7);
+}
+
+.popup.opened {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.popup-content {
+  position: relative;
+
+  padding: 45px;
+  max-width: 100%;
+  margin-top: 25px;
+
+  background: #fff;
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .popup-content {
+    min-width: 640px;
+    margin-top: 45px;
+  }
+}
+
+.popup-close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  width: 30px;
+  height: 30px;
+
+  font-size: 30px;
+  line-height: 1;
+}
+
+.button {
+  padding: 0;
+
+  border: none;
+  background: none;
+  border-radius: unset;
+  cursor: pointer;
+  color: inherit;
+  text-align: inherit;
+  line-height: inherit;
+}

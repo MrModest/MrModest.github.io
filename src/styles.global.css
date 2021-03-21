@@ -1,6 +1,6 @@
 body {
 	font-size: 1.2em;
-	font-family: 'SFRegular';
+	font-family: 'SFRegular', serif;
 	background-color: rgba(242, 242, 242, 0.5);
 	color: black;
 
@@ -10,4 +10,8 @@ body {
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+.fix-scroll {
+	overflow: hidden;
 }

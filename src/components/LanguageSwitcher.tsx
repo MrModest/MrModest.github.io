@@ -1,9 +1,9 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { setLanguage } from '../actions'
 
-import { RootState } from '../reducers';
+import {useTypedSelector} from '../reducers';
 
 import styles from './LanguageSwitcher.module.css';
 import classNames from 'classnames/bind';
@@ -15,7 +15,7 @@ const LanguageSwitcher = () => {
   const setEn = () => dispatch(setLanguage('en'));
   const setRu = () => dispatch(setLanguage('ru'));
 
-  const caption = useSelector<RootState>(state => state.language) === 'en' ? 'Language' : 'Язык';
+  const caption = useTypedSelector(state => state.language) === 'en' ? 'Language' : 'Язык';
 
   return (
     <div className={cx('lang-switcher')}>

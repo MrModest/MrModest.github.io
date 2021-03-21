@@ -1,0 +1,24 @@
+.card-edit {
+
+}
+
+.card-edit-form {
+  text-align: left;
+  width: 100%;
+}
+
+.card-edit-form th {
+  vertical-align: top;
+}
+
+.card-edit-form input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid gray;
+}
+
+.card-edit-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid gray;
+}

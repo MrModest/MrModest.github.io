@@ -10,7 +10,8 @@ export default function cardReducer(state: Card[] = [], action: CardActionTypes)
       return [...state, action.payload];
 
     case EDIT_CARD:
-      return [...state.filter(c => c.id !== action.payload.id), action.payload];
+      return [...state.filter(c => c.id !== action.payload.id), action.payload]
+        .sort((a, b) => a.id - b.id);
 
     case DELETE_CARD:
       return state.filter(c => c.id !== action.payload);

@@ -1,11 +1,9 @@
-import { useSelector } from "react-redux";
-import { RootState } from "../reducers";
-import { LocalisationKeyValue } from "../entities/Localisation";
+import {useTypedSelector} from "../reducers";
 
 export default function useLocalize(): (key: string) => string {
   //ToDo: need cache?
-  const language = useSelector<RootState, string>(state => state.language);
-  const localisation = useSelector<RootState, LocalisationKeyValue>(state => state.localisation[language]);
+  const language = useTypedSelector(state => state.language);
+  const localisation = useTypedSelector(state => state.localisation[language]);
 
   return (!localisation)
     ? (key: string) => key
