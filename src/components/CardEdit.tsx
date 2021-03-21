@@ -21,9 +21,7 @@ interface CardEditProps {
   onEdit(card: Card): void
 }
 
-const CardEdit = ({card, onEdit}: CardEditProps) => {
-  const {label, fullname, responseTime, link, description, language, blockId, id, logo} = card;
-
+const CardEdit = ({card: {label, fullname, responseTime, link, description, language, blockId, id, logo}, onEdit}: CardEditProps) => {
   const onSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     const cardFormData = event.target as typeof event.target & FormProps;
     onEdit({

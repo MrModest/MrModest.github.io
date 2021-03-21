@@ -1,17 +1,17 @@
 body {
-	font-size: 1.2em;
-	font-family: 'SFRegular', serif;
-	background-color: rgba(242, 242, 242, 0.5);
-	color: black;
+  font-size: 1.2em;
+  font-family: 'SFRegular', serif;
+  background-color: rgba(242, 242, 242, 0.5);
+  color: black;
 
-	margin: 0 200px;
+  margin: 0 200px;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .fix-scroll {
-	overflow: hidden;
+  overflow: hidden;
 }

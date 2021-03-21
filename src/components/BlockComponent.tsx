@@ -18,9 +18,7 @@ const createSelector =
   (blockId: number) =>
     createSelectorByCurrentLanguage(state => state.cards.filter(c => c.blockId === blockId));
 
-const BlockComponent = ({ block, onCardEdit }: BlockComponentProps) => {
-  const {id, title} = block;
-
+const BlockComponent = ({ block: {id, title}, onCardEdit }: BlockComponentProps) => {
   const cards = useTypedSelector(createSelector(id));
 
   return (

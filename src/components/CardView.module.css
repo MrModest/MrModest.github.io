@@ -25,6 +25,23 @@
   background: hsla(0, 0%, 84%, .7);
 }
 
+.card-header button {
+  border: 0;
+  background-color: transparent;
+}
+
+.card-header svg {
+  height: 20px;
+}
+
+.card-header svg:hover {
+  fill-opacity: 50%;
+}
+
+.card-header svg:active {
+  fill-opacity: 20%;
+}
+
 .card-title {
   margin: 0;
   font-weight: bold;

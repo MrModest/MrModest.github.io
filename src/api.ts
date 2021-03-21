@@ -13,7 +13,7 @@ export const dataUrl = rootUrl + '/data';
 export const logosUrl = dataUrl + '/logos';
 
 export async function getLocalisation(): Promise<Localisation> {
-  var resp = await axios.get(`${dataUrl}/localisation.json`)
+  const resp = await axios.get(`${dataUrl}/localisation.json`)
   if (resp.status !== 200) {
     throw new Error("Can't load localisation!");
   }
@@ -21,7 +21,7 @@ export async function getLocalisation(): Promise<Localisation> {
 }
 
 export async function getCards(): Promise<Card[]> {
-  var resp = await axios.get(`${dataUrl}/cards.json`)
+  const resp = await axios.get(`${dataUrl}/cards.json`)
   if (resp.status !== 200) {
     throw new Error("Can't load cards");
   }
@@ -29,7 +29,7 @@ export async function getCards(): Promise<Card[]> {
 }
 
 export async function getBlocks(): Promise<Block[]> {
-  var resp = await axios.get(`${dataUrl}/blocks.json`)
+  const resp = await axios.get(`${dataUrl}/blocks.json`)
   if (resp.status !== 200) {
     throw new Error("Can't load blocks");
   }
@@ -37,7 +37,7 @@ export async function getBlocks(): Promise<Block[]> {
 }
 
 export async function getProfiles(): Promise<Profile[]> {
-  var resp = await axios.get(`${dataUrl}/profiles.json`)
+  const resp = await axios.get(`${dataUrl}/profiles.json`)
   if (resp.status !== 200) {
     throw new Error("Can't load profile");
   }
