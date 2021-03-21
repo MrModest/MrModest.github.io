@@ -22,3 +22,39 @@
   border: none;
   border-bottom: 2px solid gray;
 }
+
+.button {
+  border-style: solid;
+  border-width: 0 0 3px;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  color: #FFFFFF;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  font-style: normal;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all 200ms ease-in-out 0s;
+  white-space: nowrap;
+  font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  padding: 10px 30px 9px;
+  font-size: 1em;
+
+  background-color: #C6CCD2;
+  border-color: #AAB3BB;
+
+  margin-top: 20px;
+}
+
+.button:hover, .button:focus, .button:active {
+  background-color: #B8BFC7;
+  border-color: #AAB3BB;
+}
+
+.button:active {
+  background-color: #b0b4bc;
+  border-color: #a3aab1;
+}

@@ -73,7 +73,7 @@ const CardEdit = ({card: {label, fullname, responseTime, link, description, lang
         </tr>
         </tbody>
       </table>
-      <button type='submit'>Save</button>
+      <button className={cx('button')} type='submit'>Save</button>
     </form>
   );
 }
